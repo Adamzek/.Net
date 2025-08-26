@@ -3,6 +3,14 @@ var app = builder.Build();
 
 app.UseRouting();
 
+app.Use(async (context, next) =>
+{
+    Endpoint endpoint = context.GetEndpoint();
+    if (endpoint != null)
+        await context.Response.WriteAsync($"{endpoint.DisplayName} ");
+    await next(context);
+});
+
 app.UseEndpoints(endpoint =>
 {
     endpoint.Map("/Home", async (HttpContext context) =>
