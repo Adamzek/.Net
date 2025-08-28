@@ -1,4 +1,6 @@
-﻿namespace MathGame
+﻿using MathGame.Models;
+
+namespace MathGame
 {
     internal class Menu
     {
@@ -52,7 +54,6 @@
                         Console.WriteLine("Invalid input");
                         break;
                 }
-            ;
             } while (isGameOn);
         }
     }
