@@ -8,6 +8,8 @@ bool isRunning = true;
 Console.WriteLine("WELOME TO MY C# CONSOLE CALCULATOR");
 Console.WriteLine("----------------------------------");
 
+Calculator calculator = new Calculator();
+
 while (isRunning)
 {
     string? input1 = "";
@@ -48,7 +50,7 @@ while (isRunning)
     {
         try
         {
-            result = Calculator.DoOperation(cleanNum1, cleanNum2, option);
+            result = calculator.DoOperation(cleanNum1, cleanNum2, option);
             if (double.IsNaN(result))
             {
                 Console.WriteLine("This operation will result in a mathematical error.\n");
@@ -67,4 +69,5 @@ while (isRunning)
 
     Console.WriteLine("\n");
 }
+calculator.Finish();
 return;
