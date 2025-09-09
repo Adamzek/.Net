@@ -1,6 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more 
 
-using System.Reflection;
 using Calculator;
 using System.Text.RegularExpressions;
 
@@ -19,7 +18,7 @@ while (isRunning)
     input1 = Console.ReadLine();
 
     double cleanNum1 = 0;
-    while(!double.TryParse(input1, out cleanNum1))
+    while (!double.TryParse(input1, out cleanNum1))
     {
         Console.WriteLine("Enter only numeric value: ");
         input1 = Console.ReadLine();
@@ -41,7 +40,7 @@ while (isRunning)
     Console.Write("Your option? ");
 
     string? option = Console.ReadLine();
-    if(option == null || !Regex.IsMatch(option, "[a|s|m|d]"))
+    if (option == null || !Regex.IsMatch(option, "[a|s|m|d]"))
     {
         Console.WriteLine("Unrecognized input");
     }
@@ -56,7 +55,7 @@ while (isRunning)
             }
             else Console.WriteLine("Your result : {0:0.##}\n", result);
         }
-        catch (Exception e) 
+        catch (Exception e)
         {
             Console.WriteLine("Oh no! An exception occurred trying to do the math.\n - Details: " + e.Message);
         }
@@ -64,7 +63,8 @@ while (isRunning)
     Console.WriteLine("------------------------\n");
 
     Console.Write("Press 'n' and Enter to close the app, or press any other key and Enter to continue: ");
-    if(Console.ReadLine() == "n") isRunning = false;
+    if (Console.ReadLine() == "n") isRunning = false;
 
-    Console.WriteLine("\n"); 
-} return;
+    Console.WriteLine("\n");
+}
+return;
