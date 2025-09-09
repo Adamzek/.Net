@@ -1,6 +1,5 @@
-﻿namespace Calculator
-{
-    internal static class Calculators
+﻿namespace CalculatorLibrary;
+    public class Calculator
     {
         public static double DoOperation(double num1, double num2, string option)
         {
@@ -28,4 +27,3 @@
             return result;
         }
     }
-}

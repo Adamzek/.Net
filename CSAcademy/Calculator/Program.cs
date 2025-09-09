@@ -1,6 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more 
 
-using Calculator;
+using CalculatorLibrary;
 using System.Text.RegularExpressions;
 
 bool isRunning = true;
@@ -48,7 +48,7 @@ while (isRunning)
     {
         try
         {
-            result = Calculators.DoOperation(cleanNum1, cleanNum2, option);
+            result = Calculator.DoOperation(cleanNum1, cleanNum2, option);
             if (double.IsNaN(result))
             {
                 Console.WriteLine("This operation will result in a mathematical error.\n");
